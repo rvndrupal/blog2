@@ -22,5 +22,11 @@ Route::delete('/usuarios/{id}','UsersController@destroy')->name('usuarios.destro
 */
 
 /*Generar todas las rutas de un jalon*/
+/*
 Route::resource('usuarios','UsersController');
 Route::resource('posts','PostsController');
+*/
+
+Route::get('/contacto', 'ContactController@showform');
+
+Route::post('/contacto', 'ContactController@store')->name('contacto.store');

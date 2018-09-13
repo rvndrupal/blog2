@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('edad');
+        //buscara el campo ege
+    }
+    //con esto busca en todos los campos el campo age para poder pasar
+
     /**
      * Display a listing of the resource.
      *

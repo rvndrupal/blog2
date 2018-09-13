@@ -30,3 +30,18 @@ Route::resource('posts','PostsController');
 Route::get('/contacto', 'ContactController@showform');
 
 Route::post('/contacto', 'ContactController@store')->name('contacto.store');
+
+
+/*
+Route::get('/home', function(){
+    return "si ves esta página es por que eres mayor de edad";
+})->middleware('edad');
+//http://localhost:8000/home?age=19
+*/
+
+Route::get('/login', function(){
+    return "Formulario para inicias sesión";
+})->name('auth.login');
+
+
+Route::resource('/users', 'UsersController');

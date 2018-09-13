@@ -9,7 +9,9 @@ class UsersController extends Controller
 
     public function __construct()
     {
-        $this->middleware('edad');
+       // $this->middleware('edad')->only('index'); todos
+       //$this->middleware('edad')->except('index'); 
+        $this->middleware('edad')->only('index');
         //buscara el campo ege
     }
     //con esto busca en todos los campos el campo age para poder pasar
